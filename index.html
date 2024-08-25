@@ -1,1 +1,249 @@
-<h1>Hello I'm Cheng Xin Lin</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheng Xin Lin - Profile</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f9a1bc 0%, #a1c4fd 100%); /* Colorful gradient */
+            background-attachment: fixed;
+            color: #333;
+            overflow-x: hidden;
+        }
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: flex-end; /* Align items to the right */
+            align-items: center;
+            background-color: #e0e0e0; /* Light grey background */
+            padding: 8px 20px; /* Adjusted padding */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 8px 15px; /* Adjusted padding */
+            font-size: 14px; /* Smaller font size */
+            border-radius: 4px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #ddd; /* Slightly darker grey on hover */
+            color: #333;
+        }
+        /* Profile Container */
+        .profile-container {
+            max-width: 700px;
+            margin: 60px auto;
+            background-color: #ffffff; /* White background for profile container */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .profile-pic:hover {
+            transform: scale(1.1);
+        }
+        .bio {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+         /* Skills Section */
+         .skills-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .skills-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skills-list .skill {
+            background-color: #e0e0e0;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: #333;
+            transition: background 0.3s ease;
+        }
+        .skills-list .skill:hover {
+            background-color: #ccc;
+        }
+        /* Projects Section */
+        .projects-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+        }
+        .projects-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        .project-item:hover {
+            transform: translateY(-5px);
+        }
+        .project-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .project-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .project-item p {
+            font-size: 14px;
+            color: #555;
+        }
+        /* Remove underline from project links */
+        .projects-grid a {
+            text-decoration: none; /* Removes the underline */
+            color: inherit; /* Keeps the text color the same */
+            transition: color 0.3s ease; /* Optional: Add smooth color transition on hover */
+        }
+
+        .projects-grid a:hover {
+            color: #333; /* Keeps the text color consistent on hover */
+        }
+        /* Footer */
+        footer {
+            background-color: #e0e0e0; /* Light grey background */
+            color: #333; /* Dark text color for contrast */
+            text-align: center; /* Center text */
+            padding: 8px 20px; /* Reduced padding for smaller height */
+            position: relative;
+            box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 0;
+            font-size: 12px; /* Smaller font size */
+        }
+        footer .social-icons {
+            margin: 4px 0; /* Adjusted margin */
+            display: inline-flex; /* Align icons horizontally */
+            gap: 8px; /* Space between icons */
+        }
+        footer .social-icons a {
+            color: #333; /* Dark text color for links */
+            text-decoration: none;
+            font-size: 14px; /* Font size for icons */
+            transition: color 0.3s ease;
+        }
+        footer .social-icons a:hover {
+            color: #f9a1bc; /* Lighter color on hover */
+        }
+        /* Animation */
+        @keyframes float {
+            0% {
+                transform: translatey(0px);
+            }
+            50% {
+                transform: translatey(-10px);
+            }
+            100% {
+                transform: translatey(0px);
+            }
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="profile-container floating" id="about">
+        <img src="profilepicture.jpg" alt="Cheng Xin Lin" class="profile-pic">
+        <h2 class="name">Cheng Xin Lin</h2>
+        <p class="bio">Hello, My name is Cheng Xin Lin and I am a year 2 IS student in SMU. I hope to learn more about CSS and JavaScript in class with prof Kyong!</p>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-container" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projects-container" id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <a href="Week1/justin.html">
+                <div class="project-item">
+                <img src="week1/justin1.jpg" alt="Project 1">
+                <h3>Justin</h3>
+                <p>Justin Fanpage.</p>
+            </div>
+            </a>
+            <div class="project-item">
+                <!-- <img src="project2.jpg" alt="Project 2">
+                <h3>To be updated</h3>
+                <p>To be updated</p> -->
+            </div>
+            <div class="project-item">
+                <!-- <img src="project3.jpg" alt="Project 3">
+                <h3>To be updated</h3>
+                <p>To be updated</p> -->
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Cheng Xin Lin. All rights reserved.</p>
+    </footer>
+</body>
+</html>

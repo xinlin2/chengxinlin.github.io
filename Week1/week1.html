@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin's Photo Gallery</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+            color: white;
+        }
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            padding: 14px 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+        header {
+            text-align: center;
+            margin: 40px 0;
+            padding: 0 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        header p {
+            font-size: 1.4em;
+            color: #e0e0e0;
+            max-width: 700px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 50px;
+        }
+        .image-container {
+            width: 30%;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+        .image-container:hover {
+            transform: scale(1.1);
+        }
+        .image-container:hover img {
+            transform: scale(1.15);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Justin</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+<header>
+    <h1>Welcome to Justin's Photo Gallery</h1>
+    <p>Explore a collection of Justin's favorite moments captured in stunning images. Each photo tells a unique story, showcasing Justin's adventures, interests, and memorable experiences.</p>
+</header>
+
+<div class="gallery">
+    <div class="image-container">
+        <img src="justin1.jpg" alt="Justin at the beach" onclick="showAlert(this)">
+    </div>
+
+    <div class="image-container">
+        <img src="justin2.jpg" alt="Justin hiking in the mountains" onclick="showAlert(this)">
+    </div>
+
+    <div class="image-container">
+        <img src="justin3.jpg" alt="Justin's birthday celebration" onclick="showAlert(this)">
+    </div>
+
+    <div class="image-container">
+        <img src="justin4.jpg" alt="Justin enjoying a sunset" onclick="showAlert(this)">
+    </div>
+
+    <div class="image-container">
+        <img src="justin5.jpg" alt="Justin at a music festival" onclick="showAlert(this)">
+    </div>
+
+    <div class="image-container">
+        <img src="justin6.jpg" alt="Justin's adventure in the city" onclick="showAlert(this)">
+    </div>
+</div>
+
+<script>
+    function showAlert(imgElement) {
+        alert("You clicked on: " + imgElement.alt);
+    }
+</script>
+
+</body>
+</html>

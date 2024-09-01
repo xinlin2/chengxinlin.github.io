@@ -74,6 +74,10 @@
             font-size: 18px;
             color: #555;
             line-height: 1.6;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .name {
             font-size: 24px;
@@ -106,7 +110,20 @@
         .skills-list .skill:hover {
             background-color: #ccc;
         }
-  
+
+        .video-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .video-container iframe {
+            width: 560px;
+            height: 315px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .video {
+            text-align: center;
+        }
         .weekly-updates {
             max-width: 1000px;
             margin: 40px auto;
@@ -130,6 +147,26 @@
             font-size: 16px;
             color: #555;
         }
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #f9a1bc;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 10px;
+        }
+        .button-link:hover {
+            background-color: #e88ca2;
+            transform: translateY(-3px);
+        }
+
         footer {
             background-color: #e0e0e0;
             color: #333;
@@ -189,7 +226,7 @@
                 <img src="profilepicture.jpg" alt="Cheng Xin Lin" class="profile-pic">
                 <div class="profile-info">
                     <h2 class="name">Cheng Xin Lin</h2>
-                    <p class="bio">Hello, My name is Cheng Xin Lin and I am a year 2 IS student in SMU, taking Web Application II this semseter. I hope to learn more about CSS and JavaScript in class with prof Kyong!</p>
+                    <p class="bio">Hello, My name is Cheng Xin Lin and I am a year 2 IS student in SMU, taking Web Application II this semester. I hope to learn more about CSS and JavaScript in class with prof Kyong!</p>
                 </div>
             </div>
 
@@ -207,15 +244,26 @@
         </div>
     </div>
 
+    <!-- Video Section -->
+    <div class="container">
+        <div class="profile-skills-container" id="destination">
+            <h2 class="video">My Favourite Destination</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/E9sowBdMdVU?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
     <!-- Weekly Updates Section -->
     <div class="weekly-updates" id="updates">
         <h2>Weekly Updates</h2>
-        <hr>
         <div class="update-item">
             <h3>Week 1</h3>
-            <p><a href="https://xinlin2.github.io/Week1/justin.html">Justin Bieber Fan Page</a></p>
+            <a href="https://xinlin2.github.io/Week1/justin.html" class="button-link">Justin Bieber Fan Page</a>
         </div>
-        <!-- Add more update items here as needed -->
+        <div class="update-item">
+            <h3>Week 2</h3>
+            <a href="#destination" class="button-link">My Favourite Destination</a>
+        </div>
     </div>
 
     <!-- Footer -->

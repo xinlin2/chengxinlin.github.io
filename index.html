@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheng Xin Lin - Profile</title>
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -14,185 +16,16 @@
             color: #333;
             overflow-x: hidden;
         }
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            background-color: #e0e0e0;
-            padding: 8px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        nav a {
-            color: #333;
-            text-decoration: none;
-            padding: 8px 15px;
-            font-size: 14px;
-            border-radius: 4px;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: #333;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .profile-skills-container {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            width: 100%;
-        }
-        .profile-container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .profile-pic {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-right: 20px;
-            transition: transform 0.3s ease;
-        }
         .profile-pic:hover {
             transform: scale(1.1);
         }
-        .profile-info {
-            flex: 1;
-        }
-        .bio {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-            background-color: #f0f0f0;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .skills-container {
-            width: 100%;
-            text-align: center;
-        }
-        .skills-container h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-        .skills-list .skill {
-            background-color: #e0e0e0;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-size: 14px;
-            color: #333;
-            transition: background 0.3s ease;
-        }
-        .skills-list .skill:hover {
-            background-color: #ccc;
-        }
 
-        .video-container {
-            margin: 30px 0;
-            text-align: center;
-        }
-        .video-container iframe {
+        /* iframe {
             width: 560px;
             height: 315px;
-            border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-        .video {
-            text-align: center;
-        }
-        .weekly-updates {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-        .weekly-updates h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .update-item {
-            margin-bottom: 20px;
-        }
-        .update-item h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        .update-item p {
-            font-size: 16px;
-            color: #555;
-        }
-        .button-link {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #fff;
-            background-color: #f9a1bc;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-top: 10px;
-        }
-        .button-link:hover {
-            background-color: #e88ca2;
-            transform: translateY(-3px);
-        }
+        } */
 
-        footer {
-            background-color: #e0e0e0;
-            color: #333;
-            text-align: center;
-            padding: 8px 20px;
-            position: relative;
-            box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
-        }
-        footer p {
-            margin: 0;
-            font-size: 12px;
-        }
-        footer .social-icons {
-            margin: 4px 0;
-            display: inline-flex;
-            gap: 8px;
-        }
-        footer .social-icons a {
-            color: #333;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-        footer .social-icons a:hover {
-            color: #f9a1bc;
-        }
         @keyframes float {
             0% {
                 transform: translatey(0px);
@@ -210,65 +43,86 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#updates">Weekly Updates</a>
-        <a href="#contact">Contact</a>
-    </nav>
 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Profile</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link active" aria-current="page" href="#">About</a>
+              <a class="nav-link" href="#">Skills</a>
+              <a class="nav-link" href="#">Weekly Updates</a>
+              <a class="nav-link" href="#">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
     <!-- Profile and Skills Section -->
-    <div class="container">
-        <div class="profile-skills-container floating" id="about">
+    <div class="container my-5">
+        <div class="card p-4 floating rounded-4" id="about">
             <!-- Profile Section -->
-            <div class="profile-container">
-                <img src="profilepicture.jpg" alt="Cheng Xin Lin" class="profile-pic">
-                <div class="profile-info">
-                    <h2 class="name">Cheng Xin Lin</h2>
-                    <p class="bio">Hello, My name is Cheng Xin Lin and I am a year 2 IS student in SMU, taking Web Application II this semester. I hope to learn more about CSS and JavaScript in class with prof Kyong!</p>
+            <div class="row align-items-center mb-4">
+                <div class="col-md-2">
+                    <img src="profilepicture.jpg" alt="Cheng Xin Lin" class="rounded-circle img-fluid profile-pic">
+                </div>
+                <div class="col-md-10">
+                    <h2 class="fw-bold">Cheng Xin Lin</h2>
+                    <p class="lead bg-light p-3 rounded">Hello, My name is Cheng Xin Lin and I am a year 2 IS student in SMU, taking Web Application II this semester. I hope to learn more about CSS and JavaScript in class with prof Kyong!</p>
                 </div>
             </div>
 
             <!-- Skills Section -->
-            <div class="skills-container" id="skills">
-                <h2>Skills</h2>
-                <div class="skills-list">
-                    <div class="skill">HTML</div>
-                    <div class="skill">CSS</div>
-                    <div class="skill">JavaScript</div>
-                    <div class="skill">PHP</div>
-                    <div class="skill">SQL</div>
+            <div class="text-center" id="skills">
+                <h2 class="mb-4">Skills</h2>
+                <div>
+                    <div class="badge bg-info text-dark p-3 fs-6 rounded-pill me-2 my-2 floating">HTML</div>
+                    <div class="badge bg-info text-dark p-3 fs-6 rounded-pill me-2 my-2 floating">CSS</div>
+                    <div class="badge bg-info text-dark p-3 fs-6 rounded-pill me-2 my-2 floating">JavaScript</div>
+                    <div class="badge bg-info text-dark p-3 fs-6 rounded-pill me-2 my-2 floating">PHP</div>
+                    <div class="badge bg-info text-dark p-3 fs-6 rounded-pill me-2 my-2 floating">SQL</div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Video Section -->
-    <div class="container">
-        <div class="profile-skills-container" id="destination">
-            <h2 class="video">My Favourite Destination</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/E9sowBdMdVU?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="container my-5">
+        <div class="card p-4 floating rounded-4" id="destination">
+            <h2 class="text-center">My Favourite Destination</h2>
+            <div class="text-center ratio ratio-16x9" style="max-width: 800px;margin:auto">
+                <iframe class="rounded-4 shadow" src="https://www.youtube.com/embed/E9sowBdMdVU?autoplay=1&mute=1" frameborder="0"></iframe>
             </div>
         </div>
     </div>
     <!-- Weekly Updates Section -->
-    <div class="weekly-updates" id="updates">
-        <h2>Weekly Updates</h2>
-        <div class="update-item">
-            <h3>Week 1</h3>
-            <a href="https://xinlin2.github.io/Week1/justin.html" class="button-link">Justin Bieber Fan Page</a>
-        </div>
-        <div class="update-item">
-            <h3>Week 2</h3>
-            <a href="#destination" class="button-link">My Favourite Destination</a>
+    <div class="container my-5" >
+        <div class="card p-4 floating rounded-4" id="updates">
+            <h2>Weekly Updates</h2>
+            <hr>
+            <div class="my-2">
+                <h3>Week 1</h3>
+                <a href="https://xinlin2.github.io/Week1/justin.html" class="text-decoration-none btn btn-info rounded-4">Justin Bieber Fan Page</a>
+            </div>
+            <div class="my-2">
+                <h3>Week 2</h3>
+                <a href="#destination" class="text-decoration-none btn btn-info rounded-4">My Favourite Destination</a>
+            </div>
+            <div class="my-2">
+                <h3>Week 3</h3>
+                <a href="https://xinlin2.github.io/Week3/Challenge0/justin.html" class="text-decoration-none btn btn-info rounded-4">Challenge 0</a>
+                <a href="#" class="text-decoration-none btn btn-info rounded-4">Bootstrap Apply in website</a>
+            </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Cheng Xin Lin. All rights reserved.</p>
+    <footer class="bg-light p-1">
+        <p class="text-center">&copy; 2024 Cheng Xin Lin. All rights reserved.</p>
     </footer>
+
+      <!-- Bootstrap JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

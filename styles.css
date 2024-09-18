@@ -1,0 +1,37 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9a1bc 0%, #a1c4fd 100%);
+    background-attachment: fixed;
+    color: #333;
+    overflow-x: hidden;
+}
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+/* iframe {
+    width: 560px;
+    height: 315px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+} */
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+.dark-theme {
+    background: linear-gradient(135deg, #93eac8 0%, #d9bbea 100%);
+}
